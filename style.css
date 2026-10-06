@@ -241,3 +241,63 @@ section {
 #contact .accordion-body {
     padding-left: 0;
 }
+
+/* EVENTS PAGE */
+
+.live-hero {
+    padding: 90px 0 70px;
+}
+
+.live-hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 0.95;
+    margin: 20px 0;
+}
+
+.live-intro {
+    max-width: 500px;
+    font-size: 1.1rem;
+}
+
+.events-section {
+    background: #1d1d1d;
+    color: #f5f3ee;
+}
+
+.event-table {
+    --bs-table-bg: transparent;
+    --bs-table-color: #f5f3ee;
+    --bs-table-border-color: #555;
+}
+
+.event-table th {
+    font-size: 0.75rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #aaa;
+    padding: 18px 12px;
+}
+
+.event-table td {
+    padding: 25px 12px;
+}
+
+@media (max-width: 576px) {
+    .live-hero {
+        padding: 70px 0 50px;
+    }
+
+    .live-hero h1 {
+        font-size: 3rem;
+    }
+
+    .event-table {
+        font-size: 0.8rem;
+    }
+
+    .event-table th,
+    .event-table td {
+        padding: 15px 8px;
+    }
+}
