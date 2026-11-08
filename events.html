@@ -1,208 +1,350 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>KAMOKU | Live</title>
-
-    <link
-        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-        rel="stylesheet"
-    >
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand fw-bold" href="index.html">科目 KAMOKU</a>
-
-            <button
-                class="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#mainNav"
-            >
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="events.html">Live</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#members">Members</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#songs">Songs</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-
-    <main>
-
-    <section class="live-hero">
-        <div class="container">
-            <p class="section-label">KAMOKU / LIVE</p>
-            <h1>
-                See us<br>
-                live.
-            </h1>
-            <p class="live-intro">
-                Upcoming performances, sessions and events from KAMOKU.
-            </p>
-        </div>
-
-    </section>
-
-    <section class="events-section py-5">
-            <div class="container">
-
-                <p class="section-label">UPCOMING</p>
-                <h2 class="display-5 fw-bold mb-5">Live Schedule</h2>
-
-                <div class="table-responsive">
-                    <table class="table event-table align-middle">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Event</th>
-                                <th>Location</th>
-                                <th>Type</th>
-                            </tr>
-                        </thead>
-
-                        <tbody>
-                            <tr>
-                                <td>18 OCT 2026</td>
-                                <td class="fw-bold">First Signal</td>
-                                <td>Astana, Kazakhstan</td>
-                                <td><span class="badge bg-dark">LIVE</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>07 NOV 2026</td>
-                                <td class="fw-bold">Night Session</td>
-                                <td>Almaty, Kazakhstan</td>
-                                <td><span class="badge bg-dark">SESSION</span></td>
-                            </tr>
-
-                            <tr>
-                                <td>21 NOV 2026</td>
-                                <td class="fw-bold">KAMOKU / 01</td>
-                                <td>Astana, Kazakhstan</td>
-                                <td><span class="badge bg-dark">LIVE</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-
-            </div>
-        </section>
-        <section class="booking-section py-5">
-            <div class="container">
-
-                <div class="row g-5">
-
-                    <div class="col-lg-5">
-                        <p class="section-label">CONTACT</p>
-                        <h2 class="display-5 fw-bold">Invite<br>KAMOKU.</h2>
-
-                        <p class="mt-4">
-                            Want KAMOKU at your event?
-                            Send us the details.
-                        </p>
-                    </div>
-
-                    <div class="col-lg-7">
-
-                        <form>
-                            <div class="mb-4">
-                                <label for="name" class="form-label">Your name</label>
-                                <input
-                                    type="text"
-                                    class="form-control"
-                                    id="name"
-                                    placeholder="Name"
-                                    required
-                                >
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="email" class="form-label">Email</label>
-                                <input
-                                    type="email"
-                                    class="form-control"
-                                    id="email"
-                                    placeholder="name@example.com"
-                                    required
-                                >
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="eventType" class="form-label">Event type</label>
-
-                                <select class="form-select" id="eventType">
-                                    <option selected>Select event type</option>
-                                    <option>Concert</option>
-                                    <option>Festival</option>
-                                    <option>Private event</option>
-                                    <option>Other</option>
-                                </select>
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="message" class="form-label">Message</label>
-
-                                <textarea
-                                    class="form-control"
-                                    id="message"
-                                    rows="4"
-                                    placeholder="Tell us about your event..."
-                                ></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-dark px-4">
-                                Send request
-                            </button>
-                        </form>
-
-                    </div>
-
-                </div>
-            </div>
-        </section>
-    </main>
-
-
-    <footer class="bg-dark text-white py-4">
-        <div class="container d-flex justify-content-between">
-            <span>科目 KAMOKU</span>
-            <span>Responsive Web Design Project · 2026</span>
-        </div>
-    </footer>
-
-
-    <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="KAMOKU: Japanese-inspired alternative music from Astana. Explore tracks and try our demo live ticket booking.">
+    <title>
+      KAMOKU | Live / In the room
+    </title>
+    <link rel="icon" href="images/track-1.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="vendor/jquery.min.js">
     </script>
-
-</body>
+    <script defer src="js/data.js">
+    </script>
+    <script defer src="js/booking.js">
+    </script>
+    <script defer src="js/effects.js">
+    </script>
+  </head>
+  <body data-page="live">
+    <a class="skip" href="#main">
+      Skip to content
+    </a>
+    <header>
+      <nav class="container site-nav" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          <span lang="ja">
+            科目
+          </span>
+          KAMOKU
+          <span class="brand-dot">
+            ●
+          </span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" type="button">
+          Menu +
+        </button>
+        <div id="nav-links" class="nav-links">
+          <a href="index.html">
+            Home
+          </a>
+          <a href="events.html" class="active" aria-current="page">
+            Live
+          </a>
+          <a href="index.html#about">
+            About
+          </a>
+          <a href="index.html#members">
+            Members
+          </a>
+          <a href="index.html#songs">
+            Songs
+          </a>
+          <a class="nav-ticket" href="events.html#booking">
+            Get tickets ↗
+          </a>
+        </div>
+      </nav>
+    </header>
+    <main id="main">
+      <noscript>
+        <div class="container notice">
+          Enable JavaScript to explore the track catalogue and demo booking form.
+        </div>
+      </noscript>
+      <section class="container live-hero">
+        <div>
+          <p class="eyebrow red">
+            KAMOKU / LIVE FREQUENCY
+          </p>
+          <h1>
+            Less distance.
+            <br>
+            More
+            <em>
+              decibels.
+            </em>
+          </h1>
+          <p>
+            Guitars, keys, rhythm. All in one room.
+            <br>
+            Explore the schedule and build your demo ticket.
+          </p>
+          <a class="button" href="#schedule">
+            Find a show ↓
+          </a>
+          <p class="small-note">
+            Fictional events · No real tickets or payment
+          </p>
+        </div>
+        <figure class="live-poster">
+          <img src="images/signal.svg" width="900" height="900" alt="KAMOKU signal record illustration reused as the live tour poster">
+          <figcaption>
+            <strong>
+              LIVE / 2026
+            </strong>
+            <span>
+              ASTANA → ALMATY
+            </span>
+          </figcaption>
+        </figure>
+      </section>
+      <div class="ticker" aria-hidden="true">
+        LIVE FREQUENCY
+        &nbsp;
+        /
+        &nbsp;
+        科目
+        &nbsp;
+        /
+        &nbsp;
+        THREE PEOPLE. ONE SOUND.
+        &nbsp;
+        /
+        &nbsp;
+        LIVE FREQUENCY
+      </div>
+      <section id="schedule" class="dark-section section">
+        <div class="container">
+          <div class="section-heading horizontal">
+            <div>
+              <p class="eyebrow">
+                01 / The dates
+              </p>
+              <h2>
+                Meet us in the noise.
+              </h2>
+            </div>
+            <span class="outline-label">
+              2026 / DEMO SCHEDULE
+            </span>
+          </div>
+          <div id="event-list">
+          </div>
+          <p class="small-note">
+            Past dates are kept as the Midterm archive. Upcoming demo availability is checked against your device's date.
+          </p>
+        </div>
+      </section>
+      <section id="booking" class="section container booking-layout">
+        <div class="booking-aside">
+          <p class="eyebrow red">
+            02 / Your place in the room
+          </p>
+          <h2>
+            Make it
+            <br>
+            a night.
+          </h2>
+          <p>
+            Choose a show, pick your ticket and bring your people. Your total updates as you go.
+          </p>
+          <div class="ticket-preview">
+            <div class="eyebrow">
+              科目 KAMOKU / DEMO ADMIT
+            </div>
+            <h3 id="preview-event">
+              Choose your show
+            </h3>
+            <p id="preview-detail">
+              Select an upcoming event to see the details.
+            </p>
+            <div class="ticket-total">
+              <span>
+                Estimated total
+              </span>
+              <output id="booking-total" aria-live="polite">
+                ₸0
+              </output>
+            </div>
+            <p id="price-breakdown">
+              Standard × 1 · No booking fee
+            </p>
+            <div class="barcode" aria-hidden="true">
+            </div>
+            <p class="small-note">
+              NOT A REAL TICKET
+            </p>
+          </div>
+          <p class="small-note">
+            Demo only. Nothing is sent or saved. No payment is collected. Do not enter sensitive information.
+          </p>
+        </div>
+        <div>
+          <form id="booking-form" novalidate>
+            <p class="eyebrow">
+              All fields required except notes
+            </p>
+            <div class="row g-4">
+              <div class="col-12">
+                <label class="form-label" for="name">
+                  Full name
+                </label>
+                <input class="form-control" id="name" name="name" type="text" autocomplete="name" placeholder="Your name" required maxlength="120" aria-describedby="name-error">
+                <p class="field-error" id="name-error">
+                </p>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="email">
+                  Email
+                </label>
+                <input class="form-control" id="email" name="email" type="email" autocomplete="email" placeholder="you@example.com" required maxlength="120" aria-describedby="email-error">
+                <p class="field-error" id="email-error">
+                </p>
+              </div>
+              <div class="col-12">
+                <label class="form-label" for="phone">
+                  Phone
+                </label>
+                <input class="form-control" id="phone" name="phone" type="tel" autocomplete="tel" placeholder="+7 700 123 4567" required maxlength="120" aria-describedby="phone-error">
+                <p class="field-error" id="phone-error">
+                </p>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="event">
+                  Show
+                </label>
+                <select class="form-select" id="event" name="event" required aria-describedby="event-error">
+                  <option value="">
+                    Choose an upcoming show
+                  </option>
+                </select>
+                <p class="field-error" id="event-error">
+                </p>
+              </div>
+              <div class="col-12 col-md-6">
+                <label class="form-label" for="ticket">
+                  Ticket type
+                </label>
+                <select class="form-select" id="ticket" name="ticket" required aria-describedby="ticket-error">
+                  <option value="standard">
+                    Standard / base price
+                  </option>
+                  <option value="supporter">
+                    Supporter / +50%
+                  </option>
+                </select>
+                <p class="field-error" id="ticket-error">
+                </p>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="quantity" class="form-label">
+                  Number of tickets
+                </label>
+                <input class="form-control" id="quantity" name="quantity" type="number" min="1" max="6" step="1" value="1" required aria-describedby="quantity-help quantity-error">
+                <p id="quantity-help" class="small-note">
+                  1–6 tickets per booking.
+                </p>
+                <p id="quantity-error" class="field-error">
+                </p>
+              </div>
+              <div class="col-12 col-md-6">
+                <label for="notes" class="form-label">
+                  Access notes (optional)
+                </label>
+                <textarea class="form-control" id="notes" name="notes" rows="2" maxlength="300" placeholder="Any access needs?" aria-describedby="notes-error">
+                </textarea>
+                <p id="notes-error" class="field-error">
+                </p>
+              </div>
+              <div class="col-12">
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" id="consent" name="consent" required aria-describedby="consent-error">
+                  <label class="form-check-label" for="consent">
+                    I understand this is a demo booking, with no real ticket or payment.
+                  </label>
+                </div>
+                <p class="field-error" id="consent-error">
+                </p>
+              </div>
+              <div class="col-12 form-actions">
+                <button type="submit" class="button" id="submit-booking">
+                  Confirm demo booking ↗
+                </button>
+                <button type="reset" class="text-button">
+                  Reset form
+                </button>
+              </div>
+            </div>
+            <p id="form-status" class="small-note" role="status" aria-live="polite">
+            </p>
+          </form>
+          <section id="booking-success" class="success" role="status" aria-live="polite" tabindex="-1" hidden>
+            <p class="eyebrow">
+              ✓ Demo confirmed
+            </p>
+            <h3>
+              You're on the list.
+              <br>
+              In demo mode.
+            </h3>
+            <p id="confirmation">
+            </p>
+            <p>
+              No booking was sent, no email will arrive and no real ticket was issued. The form has been cleared.
+            </p>
+            <button class="button secondary" id="dismiss-success" type="button">
+              Make another demo booking
+            </button>
+          </section>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <a class="brand" href="index.html">
+            <span lang="ja">
+              科目
+            </span>
+            KAMOKU
+          </a>
+          <p>
+            Music without boundaries.
+            <br>
+            Astana, Kazakhstan / Est. 2026
+          </p>
+          <a href="#main" class="scroll-link">
+            Back to top ↑
+          </a>
+        </div>
+        <div class="credits">
+          <p>
+            Fictional band
+            &
+            student project · Nurlanov Adil · IT-2505 · 2026
+          </p>
+          <details>
+            <summary>
+              Credits
+              &
+              project information
+            </summary>
+            <p>
+              Original Midterm concept, band members and first three track descriptions: Nurlanov Adil. Endterm redesign, JavaScript, CSS and original SVG illustrations created with OpenAI Codex (AI assistance). SVG artwork is code-generated; no external photographs or AI image generator used. Additional tracks and events are fictional demo content.
+            </p>
+            <p>
+              Bootstrap 5.3.8 (MIT) — grid and form components. jQuery 3.7.1 (MIT) — animations and effects. System fonts. No downloaded template.
+            </p>
+            <a href="https://github.com/Nurlanov-Adil/Nurlanov_Adil_Assignment3">
+              Original GitHub repository ↗
+            </a>
+          </details>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

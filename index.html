@@ -1,358 +1,472 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>KAMOKU | Japanese Band</title>
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-          rel="stylesheet">
-
-    <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-
-    <nav class="navbar navbar-expand-lg">
-        <div class="container">
-            <a class="navbar-brand" href="#">科目 KAMOKU</a>
-
-            <button class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#mainNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="events.html">Live</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#members">Members</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#songs">Songs</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="description" content="KAMOKU: Japanese-inspired alternative music from Astana. Explore tracks and try our demo live ticket booking.">
+    <title>
+      KAMOKU | Home / Sound without boundaries
+    </title>
+    <link rel="icon" href="images/track-1.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="vendor/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script defer src="vendor/jquery.min.js">
+    </script>
+    <script defer src="js/data.js">
+    </script>
+    <script defer src="js/songs.js">
+    </script>
+    <script defer src="js/effects.js">
+    </script>
+  </head>
+  <body data-page="home">
+    <a class="skip" href="#main">
+      Skip to content
+    </a>
+    <header>
+      <nav class="container site-nav" aria-label="Main navigation">
+        <a class="brand" href="index.html">
+          <span lang="ja">
+            科目
+          </span>
+          KAMOKU
+          <span class="brand-dot">
+            ●
+          </span>
+        </a>
+        <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" type="button">
+          Menu +
+        </button>
+        <div id="nav-links" class="nav-links">
+          <a href="index.html" class="active" aria-current="page">
+            Home
+          </a>
+          <a href="events.html">
+            Live
+          </a>
+          <a href="index.html#about">
+            About
+          </a>
+          <a href="index.html#members">
+            Members
+          </a>
+          <a href="index.html#songs">
+            Songs
+          </a>
+          <a class="nav-ticket" href="events.html#booking">
+            Get tickets ↗
+          </a>
         </div>
-    </nav>
-
-
-    <main>
-
-        <section id="home">
-            <div class="container">
-                <h1>KAMOKU</h1>
-                <p>Music without boundaries.</p>
+      </nav>
+    </header>
+    <main id="main">
+      <noscript>
+        <div class="container notice">
+          Enable JavaScript to explore the track catalogue and demo booking form.
+        </div>
+      </noscript>
+      <section id="home" class="hero container">
+        <div class="hero-top">
+          <span class="eyebrow">
+            Independent sound / Astana, KZ
+          </span>
+          <span class="eyebrow">
+            Alternative · Indie · Electronic
+          </span>
+        </div>
+        <h1>
+          KAMOKU
+          <span class="title-mark" aria-hidden="true">
+            01
+          </span>
+        </h1>
+        <div class="hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow red">
+              01 / A different frequency
+            </p>
+            <h2>
+              Quiet name.
+              <br>
+              Loud existence.
+            </h2>
+            <p>
+              Three people. One sound. Japanese-inspired alternative music built on restless guitars, late-night keys and a pulse that won't sit still.
+            </p>
+            <div class="actions">
+              <a class="button" href="#songs">
+                Explore the tracks ↓
+              </a>
+              <a class="text-link" href="events.html">
+                See us live ↗
+              </a>
             </div>
-        </section>
-
-
-        <section id="about">
-            <div class="container">
-                <div class="row align-items-center g-5">
-
-                    <div class="col-12 col-lg-7 order-1">
-                        <p class="about-label">WHO WE ARE</p>
-
-                        <h2 class="display-4 fw-bold mb-4">
-                            Three people.<br>
-                            One sound.
-                        </h2>
-
-                        <p class="lead">
-                            KAMOKU is a Japanese-inspired band project built
-                            around energetic guitar, keyboard melodies and
-                            powerful rhythm.
-                        </p>
-
-                        <p>
-                            Our goal is simple: create music that combines
-                            different ideas and personalities into one sound.
-                        </p>
-
-                        <a href="#members" class="btn btn-dark mt-3">
-                            Meet the band
-                        </a>
-                    </div>
-
-                    <div class="col-12 col-lg-5 order-2">
-                        <div class="about-box">
-                            <span>科目</span>
-                            <p>KAMOKU</p>
-                            <small class="d-none d-md-block">
-                                ASTANA / EST. 2026
-                            </small>
-                        </div>
-                    </div>
-
-                </div>
+            <div class="hero-note">
+              <span class="status-dot">
+              </span>
+              Music without boundaries.
+              <br>
+              <span>
+                科目 / EST. 2026
+              </span>
             </div>
-        </section>
-
-
-        <section id="members">
-            <div class="members-wrap">
-
-                <div class="members-title">
-                    <p>THE PEOPLE BEHIND THE SOUND</p>
-                    <h2>Meet the Members</h2>
-                </div>
-
-                <div class="members-grid">
-
-                    <article class="member-card">
-                        <div class="member-number">01</div>
-                        <h3>Nursultan</h3>
-                        <p class="member-role">Guitar</p>
-                        <p>
-                            Creates the main riffs and gives KAMOKU
-                            its energetic sound.
-                        </p>
-                    </article>
-
-                    <article class="member-card">
-                        <div class="member-number">02</div>
-                        <h3>Adil</h3>
-                        <p class="member-role">Keyboard</p>
-                        <p>
-                            Adds atmosphere and melodic layers
-                            to every track.
-                        </p>
-                    </article>
-
-                    <article class="member-card">
-                        <div class="member-number">03</div>
-                        <h3>Alina</h3>
-                        <p class="member-role">Drums</p>
-                        <p>
-                            Builds the rhythm and keeps the band's
-                            sound fast and powerful.
-                        </p>
-                    </article>
-
-                </div>
-            </div>
-        </section>
-
-
-        <section id="songs">
-            <div class="container">
-
-                <div class="mb-5">
-                    <p class="songs-label">OUR MUSIC</p>
-                    <h2 class="display-5 fw-bold">Selected Tracks</h2>
-                </div>
-
-                <div class="row g-4">
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100">
-                            <div class="card-body p-4">
-                                <span class="song-number">01</span>
-
-                                <h3 class="card-title mt-5">Neon Rain</h3>
-
-                                <p class="card-text">
-                                    A fast track built around guitar riffs
-                                    and bright keyboard melodies.
-                                </p>
-
-                                <span class="badge text-bg-dark">
-                                    Alternative
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100">
-                            <div class="card-body p-4">
-                                <span class="song-number">02</span>
-
-                                <h3 class="card-title mt-5">After 2AM</h3>
-
-                                <p class="card-text">
-                                    A slower song with atmospheric keys
-                                    and a simple rhythmic sound.
-                                </p>
-
-                                <span class="badge text-bg-dark">
-                                    Indie
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-12 col-md-6 col-lg-4">
-                        <div class="card h-100">
-                            <div class="card-body p-4">
-                                <span class="song-number">03</span>
-
-                                <h3 class="card-title mt-5">No Signal</h3>
-
-                                <p class="card-text">
-                                    An energetic track mixing distorted
-                                    guitar with electronic elements.
-                                </p>
-
-                                <span class="badge text-bg-dark">
-                                    Rock
-                                </span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
-
-        <section id="contact">
-            <div class="container">
-
-                <div class="row g-5">
-
-                    <div class="col-12 col-lg-5">
-                        <p class="contact-label">CONTACT</p>
-
-                        <h2 class="display-5 fw-bold">
-                            Let's make<br>
-                            some noise.
-                        </h2>
-
-                        <p class="mt-4">
-                            Have a question about KAMOKU?
-                            You can find the basic information here.
-                        </p>
-                    </div>
-
-
-                    <div class="col-12 col-lg-7">
-
-                        <div class="accordion" id="contactAccordion">
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-
-                                    <button class="accordion-button"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#questionOne">
-
-                                        Where is KAMOKU based?
-
-                                    </button>
-
-                                </h2>
-
-                                <div id="questionOne"
-                                    class="accordion-collapse collapse show"
-                                    data-bs-parent="#contactAccordion">
-
-                                    <div class="accordion-body">
-                                        The project is based in Astana, Kazakhstan.
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-
-                                    <button class="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#questionTwo">
-
-                                        What kind of music do we play?
-
-                                    </button>
-
-                                </h2>
-
-                                <div id="questionTwo"
-                                    class="accordion-collapse collapse"
-                                    data-bs-parent="#contactAccordion">
-
-                                    <div class="accordion-body">
-                                        Our sound combines alternative rock,
-                                        keyboard melodies and electronic elements.
-                                    </div>
-
-                                </div>
-                            </div>
-
-
-                            <div class="accordion-item">
-                                <h2 class="accordion-header">
-
-                                    <button class="accordion-button collapsed"
-                                            type="button"
-                                            data-bs-toggle="collapse"
-                                            data-bs-target="#questionThree">
-
-                                        When was the project created?
-
-                                    </button>
-
-                                </h2>
-
-                                <div id="questionThree"
-                                    class="accordion-collapse collapse"
-                                    data-bs-parent="#contactAccordion">
-
-                                    <div class="accordion-body">
-                                        KAMOKU was created in 2026.
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-        </section>
-
-    </main>
-    
-    <footer class="bg-dark text-white py-4">
+          </div>
+          <figure class="hero-art">
+            <img src="images/signal.svg" alt="Original KAMOKU red record artwork with diagonal signal lines and Japanese lettering" width="900" height="900">
+            <figcaption>
+              <span>
+                SIGNAL 01 — THE KAMOKU FREQUENCY
+              </span>
+              <span>
+                33⅓ RPM
+              </span>
+            </figcaption>
+          </figure>
+        </div>
+      </section>
+      <div class="ticker" aria-hidden="true">
+        科目
+        &nbsp;
+        /
+        &nbsp;
+        GUITARS. KEYS. RHYTHM.
+        &nbsp;
+        /
+        &nbsp;
+        NO BOUNDARIES.
+        &nbsp;
+        /
+        &nbsp;
+        KAMOKU
+        &nbsp;
+        /
+        &nbsp;
+        科目
+      </div>
+      <section id="about" class="section container">
+        <div class="section-heading">
+          <p class="eyebrow">
+            01 / The band
+          </p>
+          <h2>
+            Three people.
+            <br>
+            One sound.
+          </h2>
+        </div>
+        <div class="about-copy">
+          <p class="lead">
+            Made in Astana.
+            <br>
+            Inspired by everywhere.
+          </p>
+          <p>
+            KAMOKU is a Japanese-inspired band project built around energetic guitar, keyboard melodies and powerful rhythm. We combine different ideas and personalities into one sound.
+          </p>
+          <p>
+            From the bright rush of
+            <em>
+              Neon Rain
+            </em>
+            to the space between notes in
+            <em>
+              After 2AM
+            </em>
+            , we follow the feeling.
+          </p>
+          <a href="#members" class="text-link">
+            Meet the people behind it ↓
+          </a>
+        </div>
+      </section>
+      <section id="members" class="dark-section section">
         <div class="container">
-            <div class="d-flex flex-column flex-md-row justify-content-between align-items-md-center gap-2">
-
-                <span class="fw-bold">科目 KAMOKU</span>
-
-                <span class="small">
-                    Responsive Web Design Project · 2026
+          <div class="section-heading horizontal">
+            <div>
+              <p class="eyebrow">
+                02 / The people behind the sound
+              </p>
+              <h2>
+                The human element.
+              </h2>
+            </div>
+            <span class="outline-label">
+              03 MEMBERS / 01 BAND
+            </span>
+          </div>
+          <div class="members-grid">
+            <article class="member-card">
+              <div class="member-visual">
+                <img src="images/guitar.svg" alt="Original guitar illustration" loading="lazy" width="400" height="400">
+                <span class="member-number">
+                  01
                 </span>
-
-            </div>
+              </div>
+              <div class="member-body">
+                <p class="eyebrow">
+                  Guitar
+                </p>
+                <h3>
+                  Nursultan
+                </h3>
+                <p>
+                  Creates the main riffs and gives KAMOKU its energetic sound.
+                </p>
+              </div>
+            </article>
+            <article class="member-card">
+              <div class="member-visual">
+                <img src="images/keys.svg" alt="Original keyboard illustration" loading="lazy" width="400" height="400">
+                <span class="member-number">
+                  02
+                </span>
+              </div>
+              <div class="member-body">
+                <p class="eyebrow">
+                  Keyboard
+                </p>
+                <h3>
+                  Adil
+                </h3>
+                <p>
+                  Adds atmosphere and melodic layers to every track.
+                </p>
+              </div>
+            </article>
+            <article class="member-card">
+              <div class="member-visual">
+                <img src="images/drums.svg" alt="Original drums illustration" loading="lazy" width="400" height="400">
+                <span class="member-number">
+                  03
+                </span>
+              </div>
+              <div class="member-body">
+                <p class="eyebrow">
+                  Drums
+                </p>
+                <h3>
+                  Alina
+                </h3>
+                <p>
+                  Builds the rhythm and keeps the band’s sound fast and powerful.
+                </p>
+              </div>
+            </article>
+          </div>
         </div>
+      </section>
+      <section id="songs" class="section container">
+        <div class="section-heading horizontal">
+          <div>
+            <p class="eyebrow">
+              03 / Sound archive
+            </p>
+            <h2>
+              Find your frequency.
+            </h2>
+          </div>
+          <p>
+            Eight tracks. Different states of mind.
+            <br>
+            Explore the catalogue below.
+          </p>
+        </div>
+        <form id="song-controls" class="filters" role="search" aria-label="Search the song catalogue">
+          <div>
+            <label for="song-search">
+              Search tracks
+            </label>
+            <input type="search" id="song-search" class="form-control" placeholder="Try Neon Rain…" autocomplete="off">
+          </div>
+          <div>
+            <label for="song-genre">
+              Genre
+            </label>
+            <select id="song-genre" class="form-select">
+              <option value="all">
+                All genres
+              </option>
+              <option>
+                Alternative
+              </option>
+              <option>
+                Indie
+              </option>
+              <option>
+                Rock
+              </option>
+              <option>
+                Electronic
+              </option>
+            </select>
+          </div>
+          <div>
+            <label for="song-sort">
+              Sort by
+            </label>
+            <select id="song-sort" class="form-select">
+              <option value="original">
+                Track number
+              </option>
+              <option value="title">
+                Title A–Z
+              </option>
+              <option value="shortest">
+                Shortest first
+              </option>
+              <option value="newest">
+                Newest first
+              </option>
+            </select>
+          </div>
+          <button type="reset" class="button secondary">
+            Reset
+          </button>
+        </form>
+        <p id="song-count" class="eyebrow result-count" role="status" aria-live="polite">
+        </p>
+        <div id="song-grid" class="song-grid">
+        </div>
+        <div id="song-empty" class="empty" hidden>
+          <h3>
+            No frequency found.
+          </h3>
+          <p>
+            Try another title or choose “All genres”.
+          </p>
+          <button type="button" class="button" id="clear-search">
+            Clear filters
+          </button>
+        </div>
+        <p class="small-note">
+          Catalogue only: fictional tracks, no audio recordings available. Expand a track to read its story.
+        </p>
+      </section>
+      <section class="live-callout">
+        <div class="container">
+          <p class="eyebrow">
+            04 / Out of the headphones
+          </p>
+          <h2>
+            Feel it.
+            <br>
+            In the room.
+          </h2>
+          <a href="events.html#schedule" class="button light">
+            Explore live dates ↗
+          </a>
+          <span lang="ja" class="callout-kanji" aria-hidden="true">
+            音
+          </span>
+        </div>
+      </section>
+      <section id="contact" class="section container">
+        <div class="section-heading">
+          <p class="eyebrow">
+            05 / Good to know
+          </p>
+          <h2>
+            A little more
+            <br>
+            about KAMOKU.
+          </h2>
+          <p>
+            This is a fictional band project.
+            <br>
+            Explore the music catalogue or try a demo booking.
+          </p>
+        </div>
+        <div class="faq-list">
+          <article class="faq">
+            <h3>
+              <button class="disclosure" aria-expanded="false" aria-controls="faq-0">
+                Where is KAMOKU based?
+                <span aria-hidden="true">
+                  +
+                </span>
+              </button>
+            </h3>
+            <div class="disclosure-panel" id="faq-0" hidden>
+              <p>
+                The project is based in Astana, Kazakhstan, and was created in 2026.
+              </p>
+            </div>
+          </article>
+          <article class="faq">
+            <h3>
+              <button class="disclosure" aria-expanded="false" aria-controls="faq-1">
+                What kind of music do we play?
+                <span aria-hidden="true">
+                  +
+                </span>
+              </button>
+            </h3>
+            <div class="disclosure-panel" id="faq-1" hidden>
+              <p>
+                Our sound combines alternative rock, keyboard melodies and electronic elements.
+              </p>
+            </div>
+          </article>
+          <article class="faq">
+            <h3>
+              <button class="disclosure" aria-expanded="false" aria-controls="faq-2">
+                Can I buy a real ticket here?
+                <span aria-hidden="true">
+                  +
+                </span>
+              </button>
+            </h3>
+            <div class="disclosure-panel" id="faq-2" hidden>
+              <p>
+                No. This is a student project: booking is a browser-only demonstration. There are no real tickets, payments or emails. Try it on the Live page.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <div class="footer-top">
+          <a class="brand" href="index.html">
+            <span lang="ja">
+              科目
+            </span>
+            KAMOKU
+          </a>
+          <p>
+            Music without boundaries.
+            <br>
+            Astana, Kazakhstan / Est. 2026
+          </p>
+          <a href="#main" class="scroll-link">
+            Back to top ↑
+          </a>
+        </div>
+        <div class="credits">
+          <p>
+            Fictional band
+            &
+            student project · Nurlanov Adil · IT-2505 · 2026
+          </p>
+          <details>
+            <summary>
+              Credits
+              &
+              project information
+            </summary>
+            <p>
+              Original Midterm concept, band members and first three track descriptions: Nurlanov Adil. Endterm redesign, JavaScript, CSS and original SVG illustrations created with OpenAI Codex (AI assistance). SVG artwork is code-generated; no external photographs or AI image generator used. Additional tracks and events are fictional demo content.
+            </p>
+            <p>
+              Bootstrap 5.3.8 (MIT) — grid and form components. jQuery 3.7.1 (MIT) — animations and effects. System fonts. No downloaded template.
+            </p>
+            <a href="https://github.com/Nurlanov-Adil/Nurlanov_Adil_Assignment3">
+              Original GitHub repository ↗
+            </a>
+          </details>
+        </div>
+      </div>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-
-</body>
+  </body>
 </html>

@@ -1,0 +1,1576 @@
+/* KAMOKU Endterm. Original CSS/SVG design made with OpenAI Codex assistance. */
+
+/* 1. Theme colors and Bootstrap variables */
+
+:root {
+    --paper: #f1eee5;
+    --ink: #191b19;
+    --red: #bd2b24;
+    --muted: #5d6059;
+    --line: #c8c7bd;
+    --bs-body-font-family: Arial, Helvetica, sans-serif;
+    --bs-body-color: var(--ink);
+    --bs-body-bg: var(--paper);
+}
+
+/* 2. Base elements and accessibility */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-underline-offset: 5px;
+}
+
+button, input, select, textarea {
+    font: inherit;
+}
+
+button, a, input, select, textarea, summary {
+    touch-action: manipulation;
+}
+
+button {
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+h1, h2, h3, p, figure {
+    margin: 0;
+}
+
+p+p {
+    margin-top: 18px;
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+    letter-spacing: -.055em;
+    line-height: 1.02;
+}
+
+h2 {
+    font-size: clamp(2.4rem, 4.4vw, 4.4rem);
+}
+
+h3 {
+    font-size: 1.6rem;
+}
+
+p {
+    max-width: 65ch;
+}
+
+::selection {
+    background: var(--red);
+    color: #fff;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+:focus-visible {
+    outline: 3px solid #1767b0 !important;
+    outline-offset: 5px !important;
+    box-shadow: none !important;
+}
+
+/* 3. Shared layout and typography */
+
+.container {
+    max-width: 1320px;
+    width: calc(100% - 96px);
+    padding: 0;
+    margin: auto;
+}
+
+.skip {
+    position: fixed;
+    left: 20px;
+    top: -100px;
+    z-index: 100;
+    background: var(--ink);
+    color: white;
+    padding: 12px;
+}
+
+.skip:focus {
+    top: 12px;
+}
+
+section[id], main[id] {
+    scroll-margin-top: 96px;
+}
+
+.eyebrow {
+    font: 700 .69rem/1.5 'Courier New', monospace;
+    text-transform: uppercase;
+    letter-spacing: .11em;
+}
+
+.red {
+    color: var(--red);
+}
+
+.small-note {
+    font-size: .79rem;
+    color: var(--muted);
+    line-height: 1.6;
+    margin-top: 18px;
+}
+
+.section {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-heading {
+    margin-bottom: 36px;
+}
+
+.section-heading .eyebrow {
+    margin-bottom: 20px;
+}
+
+.section-heading.horizontal {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.section-heading.horizontal>p {
+    font-size: .9rem;
+    color: var(--muted);
+}
+
+/* 4. Header and navigation */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    background: var(--paper);
+    border-bottom: 1px solid var(--ink);
+}
+
+.site-nav {
+    min-height: 82px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.brand {
+    font-size: 1.25rem;
+    font-weight: 900;
+    letter-spacing: -.04em;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.brand span[lang] {
+    margin-right: 8px;
+}
+
+.brand-dot {
+    font-size: .65rem;
+    color: var(--red);
+    vertical-align: top;
+    margin-left: 4px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-links a {
+    font-size: .78rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 8px 0;
+    transition: color .18s;
+}
+
+.nav-links a:hover, .text-link:hover {
+    color: var(--red);
+}
+
+.nav-links .active {
+    border-bottom: 2px solid var(--red);
+    color: var(--red);
+}
+
+.nav-links .nav-ticket {
+    border: 1px solid var(--ink);
+    padding: 10px 16px;
+    margin-left: 8px;
+}
+
+.nav-ticket:hover {
+    background: var(--ink);
+    color: var(--paper) !important;
+}
+
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--ink);
+    padding: 8px 12px;
+    font-weight: 700;
+}
+
+/* 5. Home hero and shared buttons */
+
+.hero {
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+
+.hero-top {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 22px;
+}
+
+.hero h1 {
+    font-size: clamp(5rem, 17.8vw, 16rem);
+    letter-spacing: -.075em;
+    line-height: .87;
+    position: relative;
+    border-bottom: 1px solid var(--ink);
+    padding-bottom: 25px;
+    white-space: nowrap;
+}
+
+.title-mark {
+    letter-spacing: 0;
+    font-size: .12em;
+    vertical-align: top;
+    margin-left: 12px;
+    line-height: 1.6;
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: .82fr 1.18fr;
+    gap: 65px;
+    margin-top: 35px;
+    align-items: center;
+}
+
+.hero-copy h2 {
+    font-size: clamp(2.4rem, 4.1vw, 4.1rem);
+    margin: 20px 0 24px;
+}
+
+.hero-copy>p:not(.eyebrow) {
+    max-width: 390px;
+    font-size: .94rem;
+    color: var(--muted);
+}
+
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 12px 20px;
+    color: var(--paper);
+    background: var(--ink);
+    border: 1px solid var(--ink);
+    font-size: .8rem;
+    font-weight: 700;
+    text-decoration: none;
+    border-radius: 0;
+    transition: background .18s, color .18s, transform .18s;
+    line-height: 1.5;
+}
+
+.button:hover {
+    background: var(--red);
+    border-color: var(--red);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.button.secondary {
+    background: transparent;
+    color: var(--ink);
+}
+
+.button.secondary:hover {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.button.light {
+    background: var(--paper);
+    color: var(--ink);
+    border-color: var(--paper);
+}
+
+.button.light:hover {
+    background: var(--red);
+    color: #fff;
+    border-color: var(--red);
+}
+
+.button:disabled {
+    opacity: .55;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.text-link, .text-button {
+    font-weight: 700;
+    font-size: .83rem;
+}
+
+.text-button {
+    background: transparent;
+    border: 0;
+    text-decoration: underline;
+    text-underline-offset: 5px;
+    min-height: 44px;
+}
+
+.hero-art {
+    position: relative;
+}
+
+.hero-art img {
+    width: 100%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+}
+
+.hero-art figcaption {
+    display: flex;
+    justify-content: space-between;
+    font: 700 .57rem/1.5 'Courier New', monospace;
+    letter-spacing: .04em;
+    padding-top: 10px;
+}
+
+.hero-note {
+    font-size: .7rem;
+    font-family: 'Courier New', monospace;
+    margin-top: 50px;
+}
+
+.hero-note>span:last-child {
+    color: var(--muted);
+    margin-left: 16px;
+}
+
+.status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: var(--red);
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+/* 6. Band introduction and member cards */
+
+.ticker {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 18px 0;
+    font: 700 clamp(.8rem, 1.6vw, 1.4rem)/1.5 'Courier New', monospace;
+    letter-spacing: .11em;
+    white-space: nowrap;
+    overflow: hidden;
+    text-align: center;
+    border-block: 1px solid var(--ink);
+}
+
+#about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+}
+
+.about-copy .lead {
+    font-size: 1.65rem;
+    font-weight: 700;
+    letter-spacing: -.03em;
+    line-height: 1.3;
+    margin-bottom: 24px;
+}
+
+.about-copy>p:not(.lead) {
+    color: var(--muted);
+    font-size: .95rem;
+}
+
+.about-copy .text-link {
+    display: inline-block;
+    margin-top: 25px;
+}
+
+.dark-section {
+    background: var(--ink);
+    color: var(--paper);
+}
+
+.outline-label {
+    border: 1px solid #6d7169;
+    padding: 8px 12px;
+    white-space: nowrap;
+    font: 700 .66rem/1.6 'Courier New', monospace;
+}
+
+.members-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.member-card {
+    border: 1px solid #575a52;
+    transition: transform .2s;
+}
+
+.member-card:hover {
+    transform: translateY(-6px);
+}
+
+.member-visual {
+    position: relative;
+    overflow: hidden;
+}
+
+.member-visual img {
+    width: 100%;
+    aspect-ratio: 1.45;
+    object-fit: cover;
+    transition: transform .3s;
+}
+
+.member-card:hover img {
+    transform: scale(1.045);
+}
+
+.member-number {
+    position: absolute;
+    right: 18px;
+    top: 12px;
+    font: 700 .75rem 'Courier New', monospace;
+    background: var(--paper);
+    color: var(--ink);
+    padding: 6px;
+}
+
+.member-body {
+    padding: 24px;
+}
+
+.member-body h3 {
+    font-size: 1.9rem;
+    margin: 8px 0 18px;
+}
+
+.member-body>p:last-child {
+    font-size: .85rem;
+    color: #c6c8be;
+}
+
+/* 7. Song search, filters and cards */
+
+.filters {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr auto;
+    align-items: end;
+    gap: 16px;
+    padding: 24px;
+    background: #e6e3d9;
+    border: 1px solid var(--line);
+}
+
+label:not(.form-check-label) {
+    display: block;
+    font-size: .77rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.form-control, .form-select {
+    border: 1px solid #8b8e82;
+    border-radius: 0;
+    background-color: var(--paper);
+    color: var(--ink);
+    min-height: 48px;
+    padding: 12px;
+    font-size: .86rem;
+}
+
+.form-control:focus, .form-select:focus {
+    background-color: var(--paper);
+    color: var(--ink);
+    border-color: var(--ink);
+    box-shadow: 0 0 0 2px var(--ink);
+}
+
+.form-control::placeholder {
+    color: #74776b;
+}
+
+.result-count {
+    padding: 24px 0;
+}
+
+.song-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 28px 20px;
+}
+
+.song-card {
+    min-width: 0;
+    border: 1px solid var(--line);
+    transition: border-color .2s, transform .2s;
+}
+
+.song-card:hover {
+    border-color: var(--red);
+    transform: translateY(-5px);
+}
+
+.song-art {
+    position: relative;
+    overflow: hidden;
+}
+
+.song-art img {
+    width: 100%;
+    transition: transform .3s;
+}
+
+.song-card:hover .song-art img {
+    transform: scale(1.04);
+}
+
+.track-badge {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    background: var(--paper);
+    font: 700 .7rem 'Courier New', monospace;
+    padding: 6px;
+}
+
+.song-body {
+    padding: 16px;
+}
+
+.song-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    font: .6rem/1.4 'Courier New', monospace;
+    margin-bottom: 15px;
+    color: var(--muted);
+}
+
+.song-card h3 {
+    font-size: 1.35rem;
+    margin-bottom: 18px;
+}
+
+.disclosure {
+    background: none;
+    color: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+    border: 0;
+    border-bottom: 1px solid var(--line);
+    padding: 16px 0;
+    width: 100%;
+    font-size: .9rem;
+    font-weight: 700;
+    min-height: 44px;
+}
+
+.disclosure:hover {
+    color: var(--red);
+}
+
+.disclosure span {
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+.song-disclosure {
+    font-size: .75rem;
+    border-top: 1px solid var(--line);
+    border-bottom: 0;
+    padding-bottom: 0;
+}
+
+.disclosure-panel {
+    font-size: .88rem;
+    line-height: 1.7;
+    padding-top: 15px;
+}
+
+.disclosure-panel p {
+    padding-bottom: 12px;
+}
+
+.song-card .disclosure-panel {
+    font-size: .78rem;
+    color: var(--muted);
+}
+
+.empty {
+    text-align: center;
+    border: 1px dashed var(--muted);
+    padding: 60px 20px;
+}
+
+.empty p {
+    margin: 18px auto;
+}
+
+/* 8. Live callout and FAQ */
+
+.live-callout {
+    background: var(--red);
+    color: var(--paper);
+    position: relative;
+    overflow: hidden;
+}
+
+.live-callout .container {
+    position: relative;
+    padding-block: 65px;
+}
+
+.live-callout h2 {
+    font-size: clamp(3rem, 7vw, 7rem);
+    margin: 20px 0 30px;
+    position: relative;
+    z-index: 1;
+}
+
+.live-callout .button {
+    position: relative;
+    z-index: 1;
+}
+
+.callout-kanji {
+    position: absolute;
+    right: 20px;
+    top: -60px;
+    font-weight: 900;
+    font-size: 360px;
+    opacity: .15;
+    line-height: 1.4;
+}
+
+.live-callout .eyebrow {
+    position: relative;
+    z-index: 1;
+}
+
+#contact {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 65px;
+}
+
+#contact .section-heading>p:last-child {
+    font-size: .85rem;
+    color: var(--muted);
+    margin-top: 24px;
+}
+
+.faq h3 {
+    letter-spacing: 0;
+}
+
+.faq-list .disclosure {
+    padding: 25px 0;
+    font-size: 1rem;
+}
+
+.faq .disclosure-panel {
+    color: var(--muted);
+}
+
+/* 9. Footer and credits */
+
+footer {
+    border-top: 1px solid var(--ink);
+    padding: 42px 0 30px;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 20px;
+}
+
+.footer-top p {
+    font-size: .75rem;
+    color: var(--muted);
+}
+
+.footer-top>a:last-child {
+    font-size: .75rem;
+}
+
+.credits {
+    border-top: 1px solid var(--line);
+    margin-top: 35px;
+    padding-top: 22px;
+    font-size: .7rem;
+    color: var(--muted);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+}
+
+.credits details p {
+    margin: 15px 0;
+}
+
+.credits summary {
+    cursor: pointer;
+    font-weight: 700;
+}
+
+summary:hover {
+    color: var(--red);
+}
+
+/* 10. Live page and event schedule */
+
+.live-hero {
+    padding-block: 70px;
+    display: grid;
+    grid-template-columns: 1.35fr .65fr;
+    align-items: center;
+    gap: 65px;
+}
+
+.live-hero h1 {
+    font-size: clamp(3rem, 6.5vw, 6.5rem);
+    margin: 25px 0;
+}
+
+.live-hero h1 em {
+    font-style: normal;
+    color: var(--red);
+}
+
+.live-hero>div>p:not(.eyebrow) {
+    font-size: .95rem;
+    color: var(--muted);
+}
+
+.live-hero .button {
+    margin-top: 28px;
+}
+
+.live-poster {
+    transform: rotate(3deg);
+    border: 1px solid var(--ink);
+    box-shadow: 9px 9px 0 #d6d2c5;
+}
+
+.live-poster figcaption {
+    background: var(--ink);
+    color: var(--paper);
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.live-poster strong {
+    font-size: 1.8rem;
+    font-weight: 900;
+    letter-spacing: -.05em;
+}
+
+.live-poster span {
+    font: 700 .6rem 'Courier New', monospace;
+}
+
+.event-row {
+    border-top: 1px solid #64665e;
+    padding: 30px 0;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr 1fr;
+    gap: 35px;
+}
+
+.event-row:last-child {
+    border-bottom: 1px solid #64665e;
+}
+
+.event-date {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.event-date strong {
+    font-size: 1.1rem;
+    letter-spacing: -.03em;
+}
+
+.event-info h3 {
+    font-size: 1.8rem;
+    margin-top: 10px;
+}
+
+.event-info .disclosure {
+    font-size: .75rem;
+    color: var(--paper);
+    border: 0;
+}
+
+.event-info .disclosure:hover {
+    color: #f48578;
+}
+
+.event-info .disclosure-panel {
+    color: #ced0c7;
+    font-size: .85rem;
+}
+
+.event-action {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 12px;
+    justify-content: center;
+}
+
+.event-action>span {
+    font-size: .75rem;
+    color: #ced0c7;
+}
+
+.archive-label {
+    font-family: 'Courier New', monospace;
+    border: 1px solid #62655c;
+    padding: 9px;
+}
+
+.dark-section .small-note {
+    color: #bdc1b6;
+}
+
+/* 11. Booking form and ticket preview */
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 95px;
+}
+
+.booking-aside>p:not(.eyebrow) {
+    font-size: .9rem;
+    color: var(--muted);
+    margin-top: 25px;
+}
+
+.booking-aside h2 {
+    margin: 20px 0;
+}
+
+.ticket-preview {
+    padding: 26px;
+    background: var(--ink);
+    color: var(--paper);
+    margin-top: 35px;
+    position: relative;
+}
+
+.ticket-preview:before, .ticket-preview:after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--paper);
+    top: 52%;
+}
+
+.ticket-preview:before {
+    left: -10px;
+}
+
+.ticket-preview:after {
+    right: -10px;
+}
+
+.ticket-preview h3 {
+    margin: 28px 0 14px;
+    font-size: 1.7rem;
+}
+
+.ticket-preview>p {
+    font-size: .72rem;
+    color: #bec2b7;
+}
+
+.ticket-total {
+    border-top: 1px dashed #868a7e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.ticket-total span {
+    font-size: .7rem;
+}
+
+.ticket-total output {
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: -.06em;
+}
+
+.ticket-preview #price-breakdown {
+    margin-top: 12px;
+}
+
+.barcode {
+    height: 38px;
+    margin-top: 25px;
+    background: repeating-linear-gradient(90deg, var(--paper) 0 2px, transparent 2px 5px, var(--paper) 5px 6px, transparent 6px 12px, var(--paper) 12px 17px, transparent 17px 19px);
+}
+
+.ticket-preview .small-note {
+    color: #c4c8bd;
+}
+
+.field-error {
+    font-size: .75rem;
+    line-height: 1.5;
+    color: #a7231e;
+    margin-top: 7px;
+    min-height: 0;
+}
+
+.field-error:empty {
+    display: none;
+}
+
+.form-control.is-invalid, .form-select.is-invalid {
+    border: 2px solid #a7231e;
+    background-image: none;
+    padding-right: 12px;
+}
+
+.form-check-input {
+    border: 1px solid #777c70;
+    border-radius: 0 !important;
+    width: 19px;
+    height: 19px;
+}
+
+.form-check-input:checked {
+    background-color: var(--ink);
+    border-color: var(--ink);
+}
+
+.form-check-label {
+    font-size: .8rem;
+    padding-left: 5px;
+}
+
+.form-check-input.is-invalid~.form-check-label {
+    color: var(--ink);
+}
+
+.form-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#booking-form>.eyebrow {
+    margin-bottom: 28px;
+}
+
+.success {
+    border: 1px solid #516d4d;
+    background: #e4eadb;
+    padding: 28px;
+    margin-top: 25px;
+}
+
+.success h3 {
+    margin: 15px 0 25px;
+    font-size: 2rem;
+}
+
+.success p {
+    font-size: .88rem;
+    overflow-wrap: anywhere;
+}
+
+.success .button {
+    margin-top: 25px;
+}
+
+.notice {
+    padding: 25px;
+    border: 2px solid var(--red);
+}
+
+/* 12. Responsive layouts */
+
+@media (min-width: 768px) {
+    .members-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+@media (min-width: 1200px) {
+    .members-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+}
+
+@media (max-width: 1100px) {
+    .container {
+        width: calc(100% - 64px);
+    }
+
+    .nav-links {
+        gap: 16px;
+    }
+
+    .hero-grid {
+        gap: 35px;
+    }
+
+    .hero-note {
+        margin-top: 30px;
+    }
+
+    .song-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .filters {
+        grid-template-columns: 2fr 1fr 1fr;
+    }
+
+    .filters>.button {
+        grid-column: 3;
+    }
+
+    .booking-layout {
+        gap: 45px;
+    }
+
+    .live-hero {
+        gap: 35px;
+    }
+
+    .event-row {
+        gap: 25px;
+    }
+
+    .nav-links .nav-ticket {
+        margin-left: 0;
+    }
+
+}
+
+@media (max-width: 850px) {
+    .site-nav {
+        min-height: 70px;
+        flex-wrap: wrap;
+        gap: 0;
+        padding-block: 15px;
+    }
+
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        padding: 20px 0 5px;
+        flex-wrap: wrap;
+        gap: 12px 22px;
+    }
+
+    .nav-links.is-open {
+        display: flex;
+    }
+
+    .nav-links a {
+        min-height: 44px;
+        display: flex;
+        align-items: center;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+    }
+
+    .hero-copy h2 {
+        font-size: 2.6rem;
+    }
+
+    .hero-copy>p:not(.eyebrow) {
+        font-size: .85rem;
+    }
+
+    .hero-note {
+        margin-top: 25px;
+    }
+
+    .hero .actions {
+        gap: 15px;
+    }
+
+    .hero-art figcaption {
+        font-size: .47rem;
+    }
+
+    .section {
+        padding-block: 70px;
+    }
+
+    .song-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .filters {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .filters>div:first-child {
+        grid-column: 1/-1;
+    }
+
+    .filters>.button {
+        grid-column: auto;
+    }
+
+    .section-heading.horizontal {
+        align-items: start;
+    }
+
+    .section-heading.horizontal>p {
+        max-width: 220px;
+        font-size: .8rem;
+    }
+
+    #about, #contact {
+        gap: 40px;
+    }
+
+    .booking-layout {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .booking-aside {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        column-gap: 40px;
+        align-items: start;
+    }
+
+    .booking-aside>.eyebrow, .booking-aside>h2, .booking-aside>p {
+        grid-column: 1;
+    }
+
+    .ticket-preview {
+        grid-column: 2;
+        grid-row: 1/5;
+        margin-top: 0;
+    }
+
+    .event-row {
+        grid-template-columns: 1fr 1.6fr;
+    }
+
+    .event-action {
+        grid-column: 2;
+        align-items: start;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .live-hero h1 {
+        font-size: 3.5rem;
+    }
+
+    .live-poster strong {
+        font-size: 1.5rem;
+    }
+
+    .credits {
+        gap: 25px;
+    }
+
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: calc(100% - 40px);
+    }
+
+    .hero {
+        padding-top: 22px;
+        padding-bottom: 40px;
+    }
+
+    .hero-top {
+        gap: 14px;
+        padding-bottom: 20px;
+    }
+
+    .hero-top .eyebrow {
+        font-size: .53rem;
+        max-width: 47%;
+    }
+
+    .hero-top>.eyebrow:last-child {
+        text-align: right;
+    }
+
+    .hero h1 {
+        font-size: 19.5vw;
+        padding-bottom: 20px;
+    }
+
+    .title-mark {
+        margin-left: 5px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        margin-top: 25px;
+    }
+
+    .hero-copy h2 {
+        font-size: 3rem;
+        line-height: 1.04;
+    }
+
+    .hero-copy>p:not(.eyebrow) {
+        font-size: .9rem;
+    }
+
+    .hero-note {
+        display: none;
+    }
+
+    .hero-art figcaption {
+        font-size: .53rem;
+    }
+
+    .hero-art img {
+        aspect-ratio: 1.15;
+        object-fit: cover;
+    }
+
+    .hero .actions {
+        margin-top: 25px;
+    }
+
+    .eyebrow {
+        font-size: .62rem;
+    }
+
+    .ticker {
+        padding: 14px 0;
+    }
+
+    .section {
+        padding-block: 56px;
+    }
+
+    #about, #contact {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .section-heading {
+        margin-bottom: 25px;
+    }
+
+    .section-heading.horizontal {
+        display: block;
+    }
+
+    .section-heading.horizontal .outline-label {
+        display: inline-block;
+        margin-top: 25px;
+    }
+
+    .section-heading.horizontal>p {
+        margin-top: 20px;
+        max-width: none;
+    }
+
+    .section-heading .eyebrow {
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 2.65rem;
+    }
+
+    .members-grid {
+        gap: 25px;
+    }
+
+    .member-visual img {
+        aspect-ratio: 1.6;
+    }
+
+    .member-body {
+        padding: 22px;
+    }
+
+    .filters {
+        padding: 18px;
+        gap: 16px 12px;
+    }
+
+    .filters .button {
+        width: 100%;
+        grid-column: 1/-1;
+    }
+
+    .filters label {
+        font-size: .7rem;
+    }
+
+    .song-grid {
+        gap: 20px 12px;
+    }
+
+    .song-body {
+        padding: 12px;
+    }
+
+    .song-card h3 {
+        font-size: 1.12rem;
+    }
+
+    .song-meta {
+        flex-direction: column;
+        gap: 4px;
+        font-size: .57rem;
+    }
+
+    .song-disclosure {
+        font-size: .67rem;
+        gap: 8px;
+    }
+
+    .song-card .disclosure-panel {
+        font-size: .72rem;
+    }
+
+    .track-badge {
+        font-size: .55rem;
+        padding: 4px;
+        right: 7px;
+        top: 7px;
+    }
+
+    .result-count {
+        font-size: .62rem;
+    }
+
+    .live-callout .container {
+        padding-block: 45px;
+    }
+
+    .live-callout h2 {
+        font-size: 3.5rem;
+    }
+
+    .callout-kanji {
+        font-size: 280px;
+        right: -70px;
+        top: 0;
+    }
+
+    .footer-top {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .footer-top p {
+        margin-left: auto;
+        text-align: right;
+        font-size: .65rem;
+    }
+
+    .credits {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .live-hero {
+        grid-template-columns: 1fr;
+        padding-block: 40px;
+        gap: 35px;
+    }
+
+    .live-hero h1 {
+        font-size: 3.4rem;
+    }
+
+    .live-poster {
+        width: 80%;
+        margin: 0 auto 10px;
+        transform: rotate(2deg);
+    }
+
+    .live-poster img {
+        aspect-ratio: 1.5;
+        object-fit: cover;
+    }
+
+    .live-poster figcaption {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .live-poster strong {
+        font-size: 1.15rem;
+    }
+
+    .live-poster span {
+        font-size: .48rem;
+    }
+
+    .event-row {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-block: 28px;
+    }
+
+    .event-date {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .event-date strong {
+        font-size: .9rem;
+    }
+
+    .event-action {
+        grid-column: 1;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .event-info h3 {
+        font-size: 2rem;
+    }
+
+    .booking-aside {
+        display: block;
+    }
+
+    .booking-aside>p {
+        max-width: 48ch;
+    }
+
+    .ticket-preview {
+        margin-top: 28px;
+    }
+
+    .booking-layout {
+        gap: 35px;
+    }
+
+    .form-actions {
+        gap: 12px;
+    }
+
+    .form-actions .button {
+        width: 100%;
+    }
+
+    .success {
+        padding: 22px;
+    }
+
+    .success h3 {
+        font-size: 1.8rem;
+    }
+
+    .empty {
+        padding: 35px 18px;
+    }
+
+    .outline-label {
+        font-size: .6rem;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        animation: none !important;
+        transition: none !important;
+    }
+
+}
