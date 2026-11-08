@@ -46,16 +46,3 @@ Original Midterm author and project: Nurlanov Adil. Endterm HTML/CSS/JS, documen
 
 Bootstrap 5.3.8 — MIT, https://getbootstrap.com/ — grid and form styles. jQuery 3.7.1 — MIT, https://jquery.com/ — effects. License texts are in `vendor/`. Credits also appear on both pages and in the report draft.
 
-## Finish submission in the original repository
-
-Original repository: https://github.com/Nurlanov-Adil/Nurlanov_Adil_Assignment3
-
-1. Review and understand the code. Record your own contribution accurately in the report; this delivery's new commits are transparently authored by OpenAI Codex. No student commit history was manufactured.
-2. Update the same Midterm checkout. If you already have it locally, copy the site files into it **without replacing your existing `.git` directory**. This ZIP includes the original history only to preserve provenance for standalone use.
-3. Commit your reviewed changes before the instructor's deadline. Do not claim the two delivery commits demonstrate regular personal development. Do not backdate commits.
-4. Push to the existing repository. In GitHub Settings → Pages, select Deploy from a branch → main → / (root), if that is your course's deployment method. Verify the live pages and controls.
-5. Add the actual verified deployed URL to the report. This workspace has not pushed or published anything to GitHub.
-6. Final report must be PDF or DOCX, with accurate contributions, screenshots, credits, repository and deployment URLs. `docs/Endterm_Nurlanov_Adil_Report_DRAFT.pdf` is a draft until the missing deployment URL and contribution review are complete.
-7. Submit `Endterm_Nurlanov_Adil.zip` and your finalized report using the instructor's exact full-name spelling. Confirm the deadline yourself; it was not supplied here.
-
-Do not create a new repository for this work. Keep the topic and original repository identity.
