@@ -45,4 +45,3 @@ Chrome browser tests passed on both pages at 375, 768 and 1280 px. No horizontal
 Original Midterm author and project: Nurlanov Adil. Endterm HTML/CSS/JS, documentation and original code-generated SVG graphics: OpenAI Codex AI assistance. Extra songs/events are fictional AI-assisted demo content. No image generation model, external photos, downloaded template or external font was used.
 
 Bootstrap 5.3.8 — MIT, https://getbootstrap.com/ — grid and form styles. jQuery 3.7.1 — MIT, https://jquery.com/ — effects. License texts are in `vendor/`. Credits also appear on both pages and in the report draft.
-
