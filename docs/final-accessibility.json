@@ -1,0 +1,22 @@
+[
+  {
+    "file": "index.html",
+    "mode": "light",
+    "violations": []
+  },
+  {
+    "file": "events.html",
+    "mode": "light",
+    "violations": []
+  },
+  {
+    "file": "index.html",
+    "mode": "dark",
+    "violations": []
+  },
+  {
+    "file": "events.html",
+    "mode": "dark",
+    "violations": []
+  }
+]

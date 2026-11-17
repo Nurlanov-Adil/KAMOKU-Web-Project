@@ -1,47 +1,71 @@
-# KAMOKU Endterm — Nurlanov Adil
+# KAMOKU — Final Project
 
-An improvement of the existing **KAMOKU** Midterm, not a new topic or template.
-Original author: Nurlanov Adil · IT-2505. The original `.git` history and remote are retained.
+Nurlanov Adil · IT-2505 · WEB Technologies 1 (Front End)
 
-## Open the site
+This is the Final release of the same KAMOKU Midterm/Endterm project.
 
-Unzip the archive and open `index.html` in a browser. All libraries and artwork are local; no build, CDN or internet is needed for the site. Alternatively run `python3 -m http.server 8000` in this folder and open http://localhost:8000.
+- Repository: https://github.com/Nurlanov-Adil/KAMOKU-Web-Project
+- GitHub Pages: https://nurlanov-adil.github.io/KAMOKU-Web-Project/
+- Pages: `index.html` (Home), `events.html` (Live and saved tracks).
 
-There are two pages, matching the individual-student requirement: `index.html` (Home) and `events.html` (Live).
+## Run
 
-## Original inspection
+No build or npm installation is needed. All production libraries and graphics are local.
 
-The supplied archive contained `index.html`, `events.html`, `style.css`, `README.md`, `.gitignore`, `.git` and macOS metadata. No JS or image assets existed. Original content retained: 科目 KAMOKU, Astana / 2026 identity, members Nursultan (Guitar), Adil (Keyboard), Alina (Drums), songs Neon Rain / After 2AM / No Signal, and original three event names and dates. The older root stylesheet was replaced by `css/style.css`; an extra unmatched closing section was removed. macOS metadata is excluded.
+For reliable saved data across pages, serve the folder over HTTP, or use GitHub Pages. In the project folder run:
 
-## Features
+```sh
+python3 -m http.server 8000
+```
 
-- Custom SVG record sleeves, instrument graphics and live poster. No external photographs, missing images or template.
-- Eight song objects with six properties, rendered with DOM APIs. Combined search, genre filter, duration/title/year sorting, result count, calculated duration, no-result reset and expandable notes.
-- Four events rendered from data; past shows stay in the archive and cannot be booked. Availability uses the visitor's local date. On 8 November 2026 two upcoming demo events are available; after the final date booking closes with a message.
-- Dynamic price = base price × ticket multiplier × quantity. Supporter costs 1.5 times Standard; quantities are whole numbers from 1 to 6. No fee.
-- Eight-field Bootstrap form, including optional notes. Required fields plus email, phone, name length, event availability, ticket choice, integer/range and notes validation. Inline errors, error correction, first-invalid focus, success and reset.
-- Three distinct jQuery effects: disclosure slide, animated section scrolling, fade for results and confirmation. Queues are cleared for repeated clicks; reduced motion is honored. CSS button/card hover effects.
-- Responsive navbar, active page, Escape to close mobile navigation, skip link, visible focus, labelled fields, ARIA states, alt text and live status.
+Then visit http://localhost:8000. Direct `file://` opening is useful for a visual preview, but browsers may give separate storage areas to different local files.
 
-**Demo scope:** fictional band and events; no real recordings, tickets, payments or emails. Form data is not transmitted or stored. No fake audio/social/contact buttons.
+## New for the Final
 
-## Files for defense
+- A native keyboard-accessible Dark mode toggle on both pages. It uses a saved choice, or the operating-system preference initially, and persists after reload and navigation.
+- Home song cards can be saved. Live displays the saved list, navigation count and exact combined duration. Remove one item or clear all.
+- State is JSON in `localStorage`: `kamoku.theme.v1` and `kamoku.favorites.v1`. Favorite IDs are validated and deduplicated; broken JSON and empty storage are handled. Two open tabs stay synchronized.
+- If browser storage is blocked, the current page continues in memory and explains that choices cannot persist. Personal booking information is never stored.
+- Endterm feedback: Home has its own `Home / About / Members / Songs / FAQ` section row. The current section highlights during scrolling. Live does not display Home-section links, preventing page/section confusion.
+- Source is formatted for reading. Original song search/filter/sort, booking validation, calculated price, SVG identity and three jQuery effects remain.
 
-- `js/data.js`: shared song/event arrays and formatting helpers.
-- `js/songs.js`: filter/sort and DOM rendering.
-- `js/booking.js`: event rendering, validation, price and submit/reset.
-- `js/effects.js`: jQuery animations and mobile navigation.
-- `css/style.css`: visual system and responsive rules.
-- `images/`: original SVG assets.
-- `vendor/`: local Bootstrap CSS, jQuery and MIT licenses.
-- `docs/`: report draft, editable report notes, browser QA record, screenshots and submission checklist.
+## Files
 
-## Validation
+- `js/storage.js`: guarded JSON storage and fallback notice.
+- `js/theme.js`: early theme application and toggle.
+- `js/library.js`: favorites, counter, cross-page list, removal, duration, storage synchronization.
+- `js/home-nav.js`: Home section tracking using a scheduled scroll/resize update.
+- `js/data.js`: original catalogue and event objects plus format helpers.
+- `js/songs.js`: search/filter/sort and DOM-generated track cards.
+- `js/booking.js`: demo events, inline validation and dynamic pricing.
+- `js/effects.js`: jQuery slide, scroll and fade; menu and Escape.
+- `css/style.css`: shared variable-based light/dark system and responsive rules.
+- `images/`: original SVG graphics.
+- `vendor/`: Bootstrap CSS, jQuery and their MIT license texts.
+- `docs/FINAL-CHANGES.md`, `docs/QA-FINAL.md`: changes and verification evidence.
+- `DEFENSE.md`: explanation and two-minute demonstration guide.
 
-Chrome browser tests passed on both pages at 375, 768 and 1280 px. No horizontal document overflow, JS page errors or HTTP failures in those tests. Tested search/filter/sort, empty state/reset, rapid disclosure clicks, invalid form, corrected errors, date availability, price (5,000 × 1.5 × 3 = 22,500 KZT), success/reset, mobile menu/Escape and reduced motion. These tests do not replace reviewing the deployed GitHub Pages URL.
+## Verification
 
-## Credits
+Both pages passed at 375, 768 and 1280 px in light and dark modes. Browser checks cover persistence across reload/navigation, remove/clear, cross-tab synchronization, broken/invalid/blocked storage, scrollspy, keyboard theme toggle, mobile menu/Escape, catalogue, form and repeated animation clicks. W3C Nu reported zero HTML errors for both source pages. axe-core reported no WCAG A/AA violations in the tested four desktop page/theme states. These checks do not constitute a full screen-reader audit. See docs for exact scope.
 
-Original Midterm author, project and Endterm HTML/CSS/JS,: Nurlanov Adil. Documentation and original code-generated SVG graphics: OpenAI Codex AI assistance. Extra songs/events are fictional AI-assisted demo content. No image generation model, external photos, downloaded template or external font was used.
+## Update the existing GitHub repository
 
-Bootstrap 5.3.8 — MIT, https://getbootstrap.com/ — grid and form styles. jQuery 3.7.1 — MIT, https://jquery.com/ — effects. License texts are in `vendor/`. Credits also appear on both pages and in the report draft.
+1. Keep the existing repository and its history. This ZIP does not contain or replace a `.git` folder.
+2. Copy the release files into the existing repository root. `index.html`, `events.html`, `css`, `js`, `images` and `vendor` must remain at that level; do not add another nesting layer.
+3. Save and commit your reviewed changes with an accurate description before the course deadline. No commits were backdated, and the Codex development commits are not student-authored work history.
+4. Push/upload to the same `main` branch used by GitHub Pages. Verify the deployed version, both themes, saving across pages and form behavior.
+5. Submit `Final_Nurlanov_Adil.zip` and `Final_Nurlanov_Adil.docx` separately in the LMS Final exam folder. Confirm the full-name spelling and deadline required by the instructor.
+
+This delivery was prepared locally; it has not pushed or deployed the Final files to your account.
+
+## Credits and demo scope
+
+KAMOKU is a student project by Nurlanov Adil. OpenAI ChatGPT/Codex assisted with generating and revising the Midterm, Endterm and Final code, design, original code-generated SVG graphics and documentation. The project is not claimed as independently handwritten code. The band, tracks and events are fictional. No external photographs, image-generation service, downloaded template or web font is used.
+
+- Bootstrap 5.3.8 — MIT — https://getbootstrap.com/ — grid and form CSS.
+- jQuery 3.7.1 — MIT — https://jquery.com/ — effects.
+- Prettier 3.6.2 — formatting tool, not a production dependency.
+- Playwright/Google Chrome, axe-core and W3C Nu — verification tools, not shipped website dependencies.
+
+Bookings are demos without a backend. No real tickets, payment, email delivery or personal-data storage is provided. Past shows cannot be booked; availability follows the visitor's local date. The same AI and library credits appear on both pages and in the Final report.
